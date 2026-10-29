@@ -1,0 +1,24 @@
+{
+  "created": "2026-09-28 13:02:13",
+  "torch": "2.8.0",
+  "opset": 17,
+  "dtype": "float32",
+  "tile": 512,
+  "inputs": "RGB tile normalised exactly as src/inference.py (N, 3, 512, 512)",
+  "models": {
+    "unet": {
+      "file": "unet_fp32.onnx",
+      "md5": "1b412c00373613cea25ed2f98706db4f",
+      "bytes": 50304436
+    },
+    "fines": {
+      "file": "fines_fp32.onnx",
+      "md5": "7f67f77e7dadf82f1d1fe7ef42132680",
+      "bytes": 930523
+    }
+  },
+  "source_checkpoints": {
+    "stage3_unet_corrected_best.pth": "ade212f6d13f393cb2a27792eb4797b6",
+    "fines_detector_corrected_best.pth": "6338e290cfdb999e509cf7f04587bbcd"
+  }
+}

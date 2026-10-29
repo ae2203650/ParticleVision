@@ -1,0 +1,63 @@
+{
+  "description": "Expected post-processing output for the self-test's raw reference map (selftest/reference_output.tif = the model's unfilled map of sample_image.jpg). check_install.py requires an exact match. Class maps: 0 grain, 1 air, 2 water, 3 microplastic.",
+  "raw": "../reference_output.tif",
+  "made_with_version": "1.1.0",
+  "made": "2026-10-22 12:31:34",
+  "postprocess_settings": {
+    "method": "by_size",
+    "method_by_size": {
+      "5": "closing",
+      "7": "circles",
+      "10": "circles"
+    },
+    "default_method": "closing",
+    "radius_by_size": {
+      "5": 1,
+      "7": 2,
+      "10": 3
+    },
+    "default_radius": 2,
+    "use_size": true,
+    "max_hole_area": 39,
+    "max_added_region": 50,
+    "circle_radii_by_size": {
+      "7": [
+        2.0,
+        2.3,
+        2.6
+      ],
+      "10": [
+        3.0,
+        3.3,
+        3.6
+      ]
+    },
+    "circle_min_support": 0.6,
+    "circle_band": 0.75,
+    "circle_min_visible": 0.5,
+    "circle_max_core_fill": 0.5,
+    "circle_nms_factor": 1.5,
+    "circle_disc_margin": 0.5,
+    "circle_max_overlaps": 2
+  },
+  "cases": {
+    "D05": {
+      "particle_size": 5,
+      "expected": "expected_D05.png",
+      "method": "closing",
+      "pixels_changed": 65,
+      "circles_drawn": 0,
+      "circles_skipped_overlap": 0,
+      "class_map_md5": "87ee669d41d202e0adcddcf9675c2d67"
+    },
+    "D10": {
+      "particle_size": 10,
+      "expected": "expected_D10.png",
+      "method": "circles",
+      "pixels_changed": 425,
+      "circles_drawn": 29,
+      "circles_skipped_overlap": 0,
+      "class_map_md5": "cbfbf083226e6addea88aebae9dc05b5"
+    }
+  }
+}

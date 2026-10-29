@@ -1,0 +1,36 @@
+{
+  "description": "Mac reference outputs for Demo_Lab: the model's maps BEFORE post-processing (made on MPS, Python 3.9.6, torch 2.8.0, before any portability change). Used by check_install.py --full, which compares them with the raw copies (Fused_St_Filt_Comp_Seg_Raw.tif) written next to each result; the keys name the result's location (Fused_St_Filt_Comp_Seg_Mod.tif, post-processed since version 1.1.0).",
+  "source_reference": "the Mac reference predictions of the official test images (not included in this package)",
+  "images": {
+    "G1/G1-C0.05-F1.0-P90-S30000-SCP-D07 (1)/Before/Fused_St_Filt_Comp_Seg_Mod.tif": {
+      "reference": "before.tif",
+      "official_test_image": "Image_005",
+      "rgb_md5": "f94387b9d8849972a1c8f4eb28d0ba1a",
+      "shape": [
+        3267,
+        4552,
+        3
+      ]
+    },
+    "G1/G1-C0.05-F1.0-P90-S30000-SCP-D07 (1)/IN/PV 03/Fused_St_Filt_Comp_Seg_Mod.tif": {
+      "reference": "in_pv03.tif",
+      "official_test_image": "Image_011",
+      "rgb_md5": "edb34777bfe6225fe1e67a6221cc03dc",
+      "shape": [
+        3264,
+        4475,
+        3
+      ]
+    },
+    "G1/G1-C0.05-F1.0-P90-S30000-SCP-D07 (1)/WT/PV 03/Fused_St_Filt_Comp_Seg_Mod.tif": {
+      "reference": "wt_pv03.tif",
+      "official_test_image": "Image_012",
+      "rgb_md5": "8ba3ba8a22ea0fc388a108f2e9d29e31",
+      "shape": [
+        3258,
+        4475,
+        3
+      ]
+    }
+  }
+}

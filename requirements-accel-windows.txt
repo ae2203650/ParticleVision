@@ -1,0 +1,15 @@
+# ParticleVision — OPTIONAL faster mode for Windows PCs without an NVIDIA card
+# (AMD / Intel graphics through DirectML, or a faster CPU runtime).
+#
+# NOT part of the normal install. setup_accel_windows.bat installs these into the
+# existing .pv_env with `pip install --no-deps`, then checks that every package that
+# was already there is still exactly the same version.
+#
+# Everything these packages need (numpy, protobuf, sympy, packaging) is already pinned
+# in requirements.txt; the two lines below are the only additions.
+#
+# onnxruntime-directml ships DirectML.dll inside the wheel and also contains the normal
+# ONNX Runtime CPU backend.
+
+onnxruntime-directml==1.24.4 ; platform_system == "Windows"
+flatbuffers==25.12.19

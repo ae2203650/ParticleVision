@@ -1,0 +1,16 @@
+[theme]
+base = "light"
+primaryColor = "#2563eb"
+backgroundColor = "#f5f6fa"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#111827"
+font = "sans serif"
+
+[server]
+headless = false
+# Never stop at the "enter your email" question on a fresh computer.
+showEmailPrompt = false
+
+[browser]
+# No usage statistics are sent (the app must work with no internet at all).
+gatherUsageStats = false

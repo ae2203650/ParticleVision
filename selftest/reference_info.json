@@ -1,0 +1,29 @@
+{
+  "description": "Reference segmentation of selftest/sample_image.jpg (= official test image Image_001), made on the verified Mac before any portability change. Lossless LZW TIFF; pixel content identical to what the app writes.",
+  "source_image": "Image_001.jpg",
+  "sample_image_md5": "50d898615affdc87b7e48ef2f225afba",
+  "reference_rgb_md5": "f332f65d65e288a71afbd708b2b2d36d",
+  "class_counts": {
+    "Grains": 7801779,
+    "Air": 4268862,
+    "Water": 2711275,
+    "Fines": 26980
+  },
+  "made_on": {
+    "device": "mps",
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "created": "2026-09-26 11:17:01"
+  },
+  "settings": {
+    "fusion_scale": 8.0,
+    "fusion_margin": 2.0,
+    "batch_size": 16,
+    "tta": false
+  },
+  "checkpoint_md5": {
+    "stage3_unet_corrected_best.pth": "ade212f6d13f393cb2a27792eb4797b6",
+    "fines_detector_corrected_best.pth": "6338e290cfdb999e509cf7f04587bbcd"
+  }
+}

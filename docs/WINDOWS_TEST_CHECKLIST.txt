@@ -1,0 +1,70 @@
+ParticleVision 1.1.0 - checklist for updating the lab laptop (Windows)
+=====================================================================
+
+Takes about 1 hour, mostly waiting. Tick each step. If a step does not pass, stop and send the file named
+under "If not" to the person who gave you ParticleVision. The general instructions are in README.md (in the
+ParticleVision folder); the detailed install steps in docs\INSTALL_WINDOWS.md.
+
+[ ] 1. Copy the new folder - do NOT overwrite the old one
+       Extract the new zip so you get a NEW folder next to the old one, e.g. C:\ParticleVision_1.1.0
+       (keep the old C:\ParticleVision as it is until every step below has passed).
+       PASS: C:\ParticleVision_1.1.0\README.md exists and its first lines say "Version 1.1.0".
+       Keep the path short (near the top of C:\), not in OneDrive, not on the Desktop.
+
+[ ] 2. Run the setup (and the faster-mode setup if you use it)
+       Double-click setup_windows.bat in the NEW folder. Leave the window open until it ends.
+       PASS: the window ends with "SUCCESS — ParticleVision is installed and the self-test passed."
+       If you use the faster mode (laptops without NVIDIA): then double-click setup_accel_windows.bat and
+       afterwards benchmark_accel.bat (see docs\FASTER_MODE_WINDOWS.md).
+       PASS (faster mode): benchmark_accel ends with the faster mode marked as verified, or tells you the normal
+       path is used - both are fine.
+       If not: setup_log.txt (faster mode: setup_accel_log.txt and accel_benchmark_log.txt).
+
+[ ] 3. Run check_install (the self-test) - it ran inside the setup; look at its result
+       Open selftest\check_install_log.txt.
+       PASS: all of these lines say [PASS]:
+             - "scipy 1.13.1 installed (needed by the post-processing ...)"
+             - "D05 image (closing): 65 px filled — identical to the Mac result"
+             - "D10 image (circles): 425 px filled, 29 circles — identical to the Mac result"
+             - the line "pixel agreement, all pixels" shows at least 99.99 %, and the last line says
+               "SELF-TEST PASSED"
+       (The model check compares the map BEFORE the hole filling with the Mac reference; on another
+       graphics card a handful of pixels may differ - that is allowed by the 99.99 % rule.)
+       If not: selftest\check_install_log.txt
+
+[ ] 4. Run the full check (3 images through the real pipeline)
+       Double-click run_full_check.bat.
+       PASS: ends with "FULL CHECK PASSED"; each image has two [PASS] lines ("raw map: agreement ..." and
+       "final result = the post-processing of its raw map"), plus
+       "summary.csv records version 1.1.0, the backend and the post-processing (D07 -> circles) ...".
+       If not: selftest\full_check_log.txt
+
+[ ] 5. Segment 2 images in a small lab-structured folder
+       Start the app (run_app.bat). Top left must say "Segmenter · version 1.1.0".
+       Run Pipeline -> Browse -> choose the folder Demo_Lab_Sizes inside the ParticleVision folder
+       (two 5 um test images, named as one D10 and one D05 experiment - see its README.txt; the scan's warnings
+       about missing Before / WT folders are expected). Tick the scan box. Leave Advanced as it is
+       (Fill hollow microplastic particles ON, Particle size Auto, raw copy OFF). Start Processing.
+       PASS: "2 of 2 processed, 0 failed". In the new folder Demo_Lab_Sizes_segmented_<date>_<time>:
+         summary.csv (open in Excel), for both rows: app_version = 1.1.0, backend = the device shown in the
+           app (e.g. "CPU" or "NVIDIA ... (CUDA)" or the verified faster mode), postprocess = on;
+           the ...-D10 (99) row: particle_size_detected = 10, pp_method = circles, circles_drawn about 29;
+           the ...-D05 (98) row: particle_size_detected = 5, pp_method = closing, circles_drawn = 0;
+           mp_px_final a little larger than mp_px_raw (Mac: 26980 -> 27405 and 37945 -> 38074).
+         run_log.txt starts with "ParticleVision version: 1.1.0", "Backend: ...",
+           "Post-processing (fill hollow microplastic particles): on - ...", and has one OK line per image,
+           containing "size D10, circles r 3.0/3.3/3.6 px" and "size D05, closing r 1".
+       If not: run_log.txt and summary.csv of that folder.
+
+[ ] 6. Run Fix Segmentations on a small folder
+       First make an unfilled folder: Run Pipeline -> Browse -> Demo_Lab_Sizes again -> open Advanced ->
+       untick "Fill hollow microplastic particles" -> Start Processing (2 images).
+       Then click Fix Segmentations (left), choose that new ..._segmented_<date>_<time> folder with Browse,
+       look at one file with Preview (before | after), and click Start.
+       PASS: the page ends with 2 files fixed and no errors; the new ..._holefilled_<date>_<time> folder
+       (on the Desktop) has README_HOLEFILL.txt and holefill_summary.csv, where the D10 row says
+       method = circles and the D05 row says method = closing. The chosen folder itself is not changed.
+       If not: holefill_log.txt in the ..._holefilled_ folder.
+
+When all 6 pass, the new folder can be used for real runs. Old results folders stay readable on the Charts
+page; runs started with an older version can't be continued with 1.1.0 (start a new run).

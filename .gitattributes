@@ -1,0 +1,7 @@
+# Keep the Windows scripts byte-exact (CRLF line endings)
+*.bat -text
+# Binary files
+*.jpg binary
+*.tif binary
+*.png binary
+*.ipynb text eol=lf

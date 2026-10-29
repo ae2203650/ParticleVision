@@ -1,0 +1,43 @@
+# Environments (built by the setup scripts on each computer)
+.pv_env/
+.venv/
+venv/
+wheels/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS / Windows / archive junk
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+desktop.ini
+
+# Results written by the app and the tools (never commit lab results)
+*_segmented_*/
+*_holefilled_*/
+outputs/
+results/
+output/
+
+# Model files (too large for GitHub; see README.md -> Download the model files)
+checkpoints/*.pth
+checkpoints/**/*.pth
+accel/*.onnx
+
+# Files written at runtime on each computer
+setup_log.txt
+setup_accel_log.txt
+accel_result.json
+accel_benchmark_log.txt
+selftest/last_result.json
+selftest/last_full_result.json
+selftest/check_install_log.txt
+selftest/full_check_log.txt
+*.partial
+*.bad_*
+
+# Training outputs (training/train_unet.py, training/train_detector.py)
+training/runs/

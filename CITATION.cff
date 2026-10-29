@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Paper in preparation; DOI to be added."
+title: "ParticleVision Segmenter"
+version: "1.1.0"
+abstract: >-
+  Segmentation of microscope mosaics of microfluidic sand-pack experiments into solid grain, air, water and
+  microplastic, with automatic filling of hollow microplastic particles. Paper in preparation; DOI to be added.
+authors:
+  - family-names: "Akhtar"
+    given-names: "Usman A."
+    affiliation: "Department of Civil and Environmental Engineering, Qatar University, Doha, Qatar"
+    orcid: "https://orcid.org/0000-0002-2032-469X"
+  - family-names: "Elrahmani"
+    given-names: "Anas"
+    affiliation: "Department of Computer Science, Qatar University, Doha, Qatar"
+    orcid: "https://orcid.org/0009-0004-9328-1741"
+    email: "ae2203650@qu.edu.qa"
+  - family-names: "Elrahmani"
+    given-names: "Ahmed"
+    affiliation: "Department of Civil and Environmental Engineering, Qatar University, Doha, Qatar"
+    orcid: "https://orcid.org/0000-0002-2869-6340"
+  - family-names: "Fadlelmula"
+    given-names: "Mohamed"
+    affiliation: "Texas A&M University at Qatar, Doha, Qatar"
+    orcid: "https://orcid.org/0000-0001-6483-0773"
+  - family-names: "Rabbani"
+    given-names: "Harris Sajjad"
+    affiliation: "College of Science and Engineering, Hamad Bin Khalifa University (HBKU), Education City, Doha, Qatar"
+    orcid: "https://orcid.org/0000-0003-4134-1111"
+  - family-names: "Al-Raoush"
+    given-names: "Riyadh I."
+    affiliation: "Department of Civil and Environmental Engineering, Qatar University, Doha, Qatar"
+    orcid: "https://orcid.org/0000-0001-9420-014X"
+    email: "riyadh@qu.edu.qa"
+license: MIT
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23691786"
+    description: "Trained model weights (Zenodo)"
+keywords:
+  - microplastics
+  - image segmentation
+  - microfluidics
+  - U-Net
+# The paper describing ParticleVision - year and DOI: fill in on publication.
+# (The year and DOI lines stay commented until known: the CFF schema only accepts a number and a valid DOI there.)
+preferred-citation:
+  type: article
+  status: in-preparation
+  title: "Multi-condition dataset of pore-scale microplastic transport in micromodels during saturation and desaturation"
+  authors:
+    - family-names: "Akhtar"
+      given-names: "Usman A."
+      affiliation: "Department of Civil and Environmental Engineering, Qatar University, Doha, Qatar"
+      orcid: "https://orcid.org/0000-0002-2032-469X"
+    - family-names: "Elrahmani"
+      given-names: "Anas"
+      affiliation: "Department of Computer Science, Qatar University, Doha, Qatar"
+      orcid: "https://orcid.org/0009-0004-9328-1741"
+      email: "ae2203650@qu.edu.qa"
+    - family-names: "Elrahmani"
+      given-names: "Ahmed"
+      affiliation: "Department of Civil and Environmental Engineering, Qatar University, Doha, Qatar"
+      orcid: "https://orcid.org/0000-0002-2869-6340"
+    - family-names: "Fadlelmula"
+      given-names: "Mohamed"
+      affiliation: "Texas A&M University at Qatar, Doha, Qatar"
+      orcid: "https://orcid.org/0000-0001-6483-0773"
+    - family-names: "Rabbani"
+      given-names: "Harris Sajjad"
+      affiliation: "College of Science and Engineering, Hamad Bin Khalifa University (HBKU), Education City, Doha, Qatar"
+      orcid: "https://orcid.org/0000-0003-4134-1111"
+    # corresponding author
+    - family-names: "Al-Raoush"
+      given-names: "Riyadh I."
+      affiliation: "Department of Civil and Environmental Engineering, Qatar University, Doha, Qatar"
+      orcid: "https://orcid.org/0000-0001-9420-014X"
+      email: "riyadh@qu.edu.qa"
+  journal: "Scientific Data"
+  # year: <YEAR>
+  # doi: "<DOI>"

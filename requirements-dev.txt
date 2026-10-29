@@ -1,0 +1,28 @@
+# ParticleVision — training environment (training/train_unet.py, training/train_detector.py).
+# NOT needed to run the Segmenter app (that is requirements.txt).
+#
+# Training used Python 3.9 (the app uses Python 3.12: requirements.txt). The training record shows a Mac with the
+# PyTorch MPS backend and Python 3.9.6, with packages in the per-user Library/Python/3.9 folder (training/README.md).
+# The versions below are those installed in that Python 3.9 environment on the development Mac (same per-user folder),
+# all installed before the training (29-30 Aug 2026); the record itself does not print package versions.
+#
+#     python3.9 -m pip install -r requirements-dev.txt
+
+torch==2.8.0
+torchvision==0.23.0
+segmentation-models-pytorch==0.5.0
+timm==1.0.27
+huggingface-hub==0.36.2
+safetensors==0.7.0
+albumentations==2.0.8
+albucore==0.0.24
+opencv-python-headless==4.13.0.92
+pydantic==2.13.4
+PyYAML==6.0.2
+typing-extensions==4.15.0
+eval-type-backport==0.2.2
+numpy==2.0.2
+scipy==1.13.1
+scikit-learn==1.6.1
+pillow==10.4.0
+tqdm==4.67.1
