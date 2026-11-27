@@ -375,10 +375,10 @@ CC BY 4.0.
 
 ## Acknowledgements
 
+This work was supported by the Qatar Research Development and Innovation Council (QRDIC) under Grant No. ARG01-0430-230041. The content is solely the responsibility of the authors and does not necessarily represent the official views of Qatar Research Development and Innovation Council.
+
 Experimental data and hand-labelled segmentations were provided by the Al-Raoush research group, Department of Civil
 and Environmental Engineering, Qatar University.
-
-This work was supported by the Qatar Research Development and Innovation Council (QRDIC) under Grant No. ARG01-0430-230041. The content is solely the responsibility of the authors and does not necessarily represent the official views of Qatar Research Development and Innovation Council.
 
 ---
 
